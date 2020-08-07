@@ -1,9 +1,24 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
+    master = []
+    cache = {}
+    result = []
+
+    # create one array with from all the arrays given
+    for arr in arrays:
+        master.extend(arr)
+    # loop through all numbers
+    for num in master:
+        # if it's in the cache
+        if num in cache:
+            cache[num] += 1
+        else:
+            cache[num] = 1
+
+        # the numbers we are looking for will equal as many lists as we have, thats the overlap
+        if cache[num] >= len(arrays):
+            result.append(num)
+    
     return result
 
 
