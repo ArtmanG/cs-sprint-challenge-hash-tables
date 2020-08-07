@@ -4,7 +4,7 @@ def intersection(arrays):
     cache = {}
     result = []
 
-    # create one array with from all the arrays given
+    # create one array from all the arrays given
     for arr in arrays:
         master.extend(arr)
     # loop through all numbers
